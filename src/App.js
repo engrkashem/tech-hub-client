@@ -12,7 +12,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 //npm install axios@0.26.1
 function App() {
   return (
-    <div >
+    <div className=" bg-teal-50">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />}></Route>
