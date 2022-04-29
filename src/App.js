@@ -8,6 +8,8 @@ import Header from "./Pages/Header/Header";
 import Home from "./Pages/Home/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
 
+
+//npm install axios@0.26.1
 function App() {
   return (
     <div >
