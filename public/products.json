@@ -1,0 +1,282 @@
+[
+    {
+        "name": "LED Round Light",
+        "price": "8",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Round Light of 9W, 12W, 20W of different color  available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/tY2fQ5L/round-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Ceiling Light",
+        "price": "20",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "LED Ceiling Light of 50W, 100W and 250W of Warm and neutrol color available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/Jd5TXv2/ceiling-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED SPOT Light",
+        "price": "10",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Spot Light of 9W, 12W, 20W of different color  available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/nfzzCm6/spot-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Rope Light",
+        "price": "150",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Colorfull Rope Light with dimmer or without dimmer available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/NKxScRN/rope-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Tube Light",
+        "price": "8",
+        "quantity": "500",
+        "email": "kashemaust@gmail.com",
+        "description": "Tube Light of 18W, 22W, 24W, 28W, 40W,  available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/jb2gF8m/tube-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Down Light",
+        "price": "6",
+        "quantity": "500",
+        "email": "kashemaust@gmail.com",
+        "description": "Down Light of 9W, 12W, 20W, 32W, 50W, 100W and 250W  available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/wJQdKF1/down-light.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Bulb",
+        "price": "5",
+        "quantity": "500",
+        "email": "kashemaust@gmail.com",
+        "description": "9W, 12W, 20W, 32W, 50W, 100W and 250W led Bulb available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/XDXzvqc/bulb.png",
+        "category": "Lightings"
+    },
+    {
+        "name": "LED Bulb Chips",
+        "price": "4",
+        "quantity": "500",
+        "email": "kashemaust@gmail.com",
+        "description": "9W, 12W, 20W, 32W, 50W, 100W and 250W led Buld Chips available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/pyTY7Cj/led-chips-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "LED Light Driver",
+        "price": "4",
+        "quantity": "500",
+        "email": "kashemaust@gmail.com",
+        "description": "9W, 12W, 20W, 32W, 50W, 100W and 250W led light driver available in stock.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/RDg58Kx/driver-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "Power Supply",
+        "price": "70",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "1200 W Moduler RGB Power Supply available in Stock.",
+        "supplier": "Amazon",
+        "img": "https://i.ibb.co/my1t9Md/power-supply-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "GIGABYTE Motherboard",
+        "price": "100",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "GIGABYTE motherboard of different generation and configuration available in stock",
+        "supplier": "GIGABYTE",
+        "img": "https://i.ibb.co/nCrGmVC/motherboard-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "ARDUINO Board",
+        "price": "18",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Programmable ARDUINO PCB board available in stock.",
+        "supplier": "Daraz",
+        "img": "https://i.ibb.co/F7W8zP3/arduino-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "BOSCH Drill Machine",
+        "price": "40",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Various BOSCH drill machine available in stock.",
+        "supplier": "BOSCH",
+        "img": "https://i.ibb.co/6mqkXyq/drill-machine-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "Auto Screw Driver",
+        "price": "80",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Auto Screw driver of different bard available in stock.",
+        "supplier": "Daraz",
+        "img": "https://i.ibb.co/9c47nBQ/auto-screw-driver-acc.png",
+        "category": "Accessories"
+    },
+    {
+        "name": "EPSON Printer",
+        "price": "120",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "All kind of EPSON printer of different config and facilities available in stock.",
+        "supplier": "EPSON",
+        "img": "https://i.ibb.co/sqJBq4Q/printer.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "PC Building",
+        "price": "250",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Different configuration PC of various brand always available in stock",
+        "supplier": "Amazon",
+        "img": "https://i.ibb.co/qMzbQgB/computer.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "Acer Laptop",
+        "price": "350",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Acer Long Lasting Battery laptop of different configuration available in stock.",
+        "supplier": "Acer",
+        "img": "https://i.ibb.co/VpKq4hq/laptop.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "Washing Machine",
+        "price": "600",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "7 KG to 9 KG front load and 8 Kg to 14 KG Top Load Washing Machine availabe in Stock",
+        "supplier": "LG",
+        "img": "https://i.ibb.co/4dX4XND/washing-machine.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "SONY Bravia",
+        "price": "200",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "32 inch to 65 inch 3D 4K Television available in Stock",
+        "supplier": "SONY",
+        "img": "https://i.ibb.co/yk317dV/tv.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "Samsung S Series",
+        "price": "300",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Only Samsung Flagship Phones Available in stock.",
+        "supplier": "Samsung",
+        "img": "https://i.ibb.co/tD0CvTq/phone.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "Air Conditioner",
+        "price": "500",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "1 Ton, 1.5 Ton, 2 Ton, 2.5 Ton and 5 Ton Split Type AC availabe in Stock",
+        "supplier": "GREE",
+        "img": "https://i.ibb.co/H7DG5tP/ac.png",
+        "category": "Home-Appliences"
+    },
+    {
+        "name": "RAM",
+        "price": "220",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "DDR3 and DDR4 RAM of different size Available here.",
+        "supplier": "Kingston",
+        "img": "https://i.ibb.co/tXm0Z54/ram.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "Processor",
+        "price": "200",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Core i3, Core i5, core i7 of different generation (5th to 12th) available here.",
+        "supplier": "Intel Corp.",
+        "img": "https://i.ibb.co/bKTyPfR/processor.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "Keyboard",
+        "price": "30",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Wireless and professional mechanical keyboard you will find here.",
+        "supplier": "Logitech",
+        "img": "https://i.ibb.co/nzH0ym0/keyboard.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "WiFi Router",
+        "price": "35",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Router and switches of various brand and different configuration available here.",
+        "supplier": "AliExpress",
+        "img": "https://i.ibb.co/xhdYzLh/router.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "Mouse",
+        "price": "10",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Including Laser mouse, infrared mouse, wireless mouse all type of mouse available here.",
+        "supplier": "A4 Tech",
+        "img": "https://i.ibb.co/0QmYDrv/mouse.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "Pen Drive",
+        "price": "15",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Pen drive of different memory size (32GB, 64GB, 128GB, 256GB etc) and of world class brand available here.",
+        "supplier": "Alibaba",
+        "img": "https://i.ibb.co/s1nDjPG/pen-drive.png",
+        "category": "Dev-Appliences"
+    },
+    {
+        "name": "Graphics Card",
+        "price": "250",
+        "quantity": "50",
+        "email": "kashemaust@gmail.com",
+        "description": "Different Types of Graphics card of various brad available here that will suerly satisfy your purpose.",
+        "supplier": "Amazon",
+        "img": "https://i.ibb.co/fMjt3Py/g-card.png",
+        "category": "Dev-Appliences"
+    }
+]
