@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -26,8 +27,8 @@ const SocialLogin = () => {
 
     return (
         <div>
-            {error ? <h6 className='text-red-700'>{errorMessage}</h6> : ''}
-            <button onClick={() => signInWithGoogle()} className='flex items-center justify-center'><img width={'40px'} src={google} alt="google logo" /> <span className=' ml-5'>Google Login</span></button>
+            {error ? <h6 className='text-red-700 my-4'>{errorMessage}</h6> : ''}
+            <Button onClick={() => signInWithGoogle()} ><img width={'40px'} src={google} alt="google logo" /> <span className=' ml-5'>Google Login</span></Button>
         </div>
 
     );

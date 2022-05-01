@@ -1,25 +1,84 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../../Styles/Login/Login.css';
-import google from '../../../images/logoes/icons-google.png'
 import { Button } from '@mui/material';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     //vanilla CSS scripted on Login.css file
+
+    const emailRef = useRef('');
+    const passRef = useRef('');
+    const navigate = useNavigate();
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const [
+        sendPasswordResetEmail,
+        sending,
+        errorReset] = useSendPasswordResetEmail(
+            auth
+        );
+
+    if (user) {
+        console.log(user);
+        navigate('/home');
+    }
+
+    let errorMessage;
+    if (error || errorReset) {
+        errorMessage = error?.message;
+        errorMessage = errorReset?.message;
+    }
+
+    if (loading || sending) {
+        return <p>Loading.....</p>
+    }
+
+    const handleLoginSubmit = async e => {
+        e.preventDefault();
+        const email = emailRef.current.value;
+        const password = passRef.current.value;
+        await signInWithEmailAndPassword(email, password);
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Password Reset Email has been sent.');
+        }
+        else {
+            toast('Ooops!! Forgot rendering Email address. Please Enter Your Email Address');
+        }
+
+    }
+
     return (
         <div className='login-container' >
             <div className="container">
-                <form>
+                <form onSubmit={handleLoginSubmit}>
                     <span className="text">Login</span>
                     <div className="inputs">
-                        <input type="email" placeholder="Email" required />
-                        <input type="password" placeholder="Password" required />
+                        <input ref={emailRef} type="email" placeholder="Email" required />
+                        <input ref={passRef} type="password" placeholder="Password" required />
+                        {
+                            error ? <h6 className=' text-red-700 my-4'>{errorMessage}</h6> : ''
+                        }
                         <Button type="submit">LOGIN</Button>
                     </div>
                 </form>
                 <h5 className=' text-gray-500 mt-5'>New to Tech Hub? <Link className=' text-blue-600 font-medium' to={'/register'}>Register</Link></h5>
-                <h5 className=' text-gray-500 mt-2 mb-8'>Forgot Password? <span className=' text-blue-600 font-medium cursor-pointer' >Reset</span></h5>
-                <Button ><img width={'40px'} src={google} alt="google logo" /> <span className=' ml-5 font-medium'>Google Login</span></Button>
+                <h5 className=' text-gray-500 mt-2 mb-8'>Forgot Password? <span onClick={resetPassword} className=' text-blue-600 font-medium cursor-pointer' >Reset</span></h5>
+                <SocialLogin></SocialLogin>
 
             </div>
         </div>

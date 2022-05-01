@@ -2,9 +2,13 @@ import React from 'react';
 import { Transition } from '@headlessui/react';
 import { useState } from 'react';
 import CustomLink from '../Shared/CustomLink/CustomLink';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [user] = useAuthState(auth);
     return (
         <div>
             <nav className=" bg-teal-50">
@@ -40,13 +44,22 @@ const Header = () => {
                                     >
                                         About
                                     </CustomLink>
+                                    {
+                                        user ? <CustomLink
+                                            onClick={() => signOut(auth)}
+                                            to="/login"
+                                            className=" px-3 py-2 rounded-md text-base font-medium"
+                                        >
+                                            Log Out
+                                        </CustomLink> :
+                                            <CustomLink
+                                                to="/login"
+                                                className=" px-3 py-2 rounded-md text-base font-medium"
+                                            >
+                                                Login
+                                            </CustomLink>
+                                    }
 
-                                    <CustomLink
-                                        to="/login"
-                                        className=" px-3 py-2 rounded-md text-base font-medium"
-                                    >
-                                        Login
-                                    </CustomLink>
                                 </div>
                             </div>
                         </div>
@@ -125,13 +138,22 @@ const Header = () => {
                             >
                                 About
                             </CustomLink>
+                            {
+                                user ?
+                                    <CustomLink onClick={() => signOut(auth)}
+                                        to="/login"
+                                        className=" px-3 py-2 rounded-md text-base font-medium"
+                                    >
+                                        Log Out
+                                    </CustomLink> :
+                                    <CustomLink
+                                        to="/login"
+                                        className=" px-3 py-2 rounded-md text-base font-medium"
+                                    >
+                                        Login
+                                    </CustomLink>
+                            }
 
-                            <CustomLink
-                                to="/login"
-                                className=" px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Login
-                            </CustomLink>
                         </div>
                     </div>
 

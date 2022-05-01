@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    //vanilla CSS scripted on Login.css file
+
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passRef = useRef('');
@@ -21,18 +23,20 @@ const Register = () => {
 
     const [updateProfile, updating, errorUpPro] = useUpdateProfile(auth);
 
+
+    if (user) {
+        console.log(user);
+        navigate('/home');
+    }
+
+    if (loading || updating) {
+        return <p>Loading....</p>
+    }
+
     let errorMessage;
     if (error || errorUpPro) {
         errorMessage = error?.message;
         errorMessage = errorUpPro?.message;
-
-    }
-    if (user) {
-        console.log(user)
-        navigate('/home')
-    }
-    if (loading || updating) {
-        return <p>Loading....</p>
     }
 
     const handleRegisterSubmit = async e => {
@@ -68,7 +72,7 @@ const Register = () => {
                         <button type="submit">Register</button>
                     </div>
                 </form>
-                <h5 className=' text-gray-500 mt-5'>Already Registered? <Link className=' text-blue-600 font-medium' to={'/login'}>Login</Link></h5>
+                <h5 className=' text-gray-500 my-8'>Already Registered? <Link className=' text-blue-600 font-medium' to={'/login'}>Login</Link></h5>
                 <SocialLogin></SocialLogin>
             </div>
         </div>
