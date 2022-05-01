@@ -11,7 +11,7 @@ const Header = () => {
     const [user] = useAuthState(auth);
     return (
         <div>
-            <nav className=" bg-teal-50">
+            <nav className=" bg-teal-50 z-10">
                 <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="w-full flex items-center justify-between">

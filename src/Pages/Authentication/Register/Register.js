@@ -60,7 +60,7 @@ const Register = () => {
         <div className='login-container' >
             <div className="container my-5">
                 <form onSubmit={handleRegisterSubmit}>
-                    <span className="text">Register</span>
+                    <span className="textH">Register</span>
                     <div className="inputs">
                         <input ref={nameRef} type="text" placeholder="Name" required />
                         <input ref={emailRef} type="email" placeholder="Email" required />

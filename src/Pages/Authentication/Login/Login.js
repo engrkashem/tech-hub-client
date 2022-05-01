@@ -66,7 +66,7 @@ const Login = () => {
         <div className='login-container' >
             <div className="container">
                 <form onSubmit={handleLoginSubmit}>
-                    <span className="text">Login</span>
+                    <span className="textH">Login</span>
                     <div className="inputs">
                         <input ref={emailRef} type="email" placeholder="Email" required />
                         <input ref={passRef} type="password" placeholder="Password" required />
