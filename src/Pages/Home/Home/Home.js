@@ -1,12 +1,12 @@
 import React from 'react';
-import useGetProducts from '../../../hooks/useGetProducts';
+import useGetStock from '../../../hooks/useGetProducts';
 import Banner from '../Banner/Banner';
 import ProductCard from '../ProductCard/ProductCard';
 
 const Home = () => {
-    const url = `http://localhost:5000/products`;
-    const [products] = useGetProducts(url)
-    // console.log(products)
+    const url = `https://protected-ridge-43119.herokuapp.com/products`;
+    const [products] = useGetStock(url);
+
     return (
         <div>
             <Banner></Banner>
