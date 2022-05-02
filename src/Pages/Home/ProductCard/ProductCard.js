@@ -2,12 +2,14 @@ import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../../Styles/ProductCard/ProductCard.css';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, handleDeliveredBtn }) => {
     const { name, img, description, price, quantity, supplier, _id } = product;
     const navigate = useNavigate();
     const pageRoute = window.location.pathname;
     const quantityRef = useRef('');
-    // console.log(pageRoute);
+    // console.log(product)
+
+
     // console.log(product)
     return (
         <section className="product">
@@ -48,7 +50,7 @@ const ProductCard = ({ product }) => {
                     (pageRoute === '/') ?
                         <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-3/4 m-auto">REVIEW STOCK</button> :
                         <>
-                            <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-1/4 m-auto ">DELIVERED</button>
+                            <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-1/4 m-auto ">DELIVERED</button>
                             <div className=' flex items-center justify-center gap-5 mt-8'>
                                 <input ref={quantityRef} className=' w-1/4 my-0' placeholder='Quantity'></input>
                                 <button onClick={() => console.log(quantityRef.current.value)} className='buy--btn w-1/4 my-0'>UPDATE STOCK</button>
