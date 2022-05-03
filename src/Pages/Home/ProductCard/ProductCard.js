@@ -47,7 +47,7 @@ const ProductCard = ({ product, handleDeliveredBtn, handleUpdateStock }) => {
                 <div className="description">
                     {
                         quantity ?
-                            <h4>STOCK: {quantity}</h4> : 'SOLD'
+                            <h4 className=' text-xl font-medium'>STOCK: <span className=' text-3xl font-bold'>{quantity}</span></h4> : 'SOLD'
                     }
                     <h3 className=' font-semibold'>DESCRIPTION:</h3>
                     {

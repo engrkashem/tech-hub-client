@@ -15,11 +15,11 @@ const TableBodyComponent = ({ product }) => {
     return (
         <TableRow>
             <TableCell >
-                <div className='flex items-center justify-around'>
-                    < img className=' w-8 rounded-full mr-2' src={img} alt='' /> {name}
+                <div className='flex items-center justify-between'>
+                    < img className=' w-10 h-10 rounded-full mr-2' src={img} alt='' /> {name}
                 </div>
             </TableCell>
-            <TableCell>{quantity}</TableCell>
+            <TableCell align='center'>{quantity}</TableCell>
             <TableCell><button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto">Manage <UpdateIcon /></button></TableCell>
             <TableCell><div title='Delete This Item' className=' flex items-center justify-center h-12 w-12 bg-rose-200 rounded-full'><DeleteForeverIcon className=' text-red-600' fontSize='large' /></div></TableCell>
         </TableRow>

@@ -11,6 +11,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import 'react-toastify/dist/ReactToastify.css';
 import Inventory from "./Pages/Inventories/Inventory/Inventory";
 import ItemDetails from "./Pages/Inventories/ItemDetails/ItemDetails";
+import AddStock from "./Pages/Inventories/AddStock/AddStock";
 
 
 //npm install axios@0.26.1
@@ -25,6 +26,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/inventory" element={<Inventory />}></Route>
         <Route path="/inventory/:id" element={<ItemDetails />}></Route>
+        <Route path="/add-stock" element={<AddStock />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/about" element={<About />}></Route>
