@@ -1,6 +1,11 @@
 import React, { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../../Styles/ProductCard/ProductCard.css';
+import UpdateIcon from '@mui/icons-material/Update';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 const ProductCard = ({ product, handleDeliveredBtn, handleUpdateStock }) => {
     const { name, img, description, price, quantity, supplier, _id } = product;
@@ -53,12 +58,15 @@ const ProductCard = ({ product, handleDeliveredBtn, handleUpdateStock }) => {
                 </div>
                 {
                     (pageRoute === '/') ?
-                        <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-3/4 m-auto">REVIEW STOCK</button> :
+                        <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto">REVIEW STOCK <InventoryIcon /></button> :
                         <>
-                            <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-1/4 m-auto ">DELIVERED</button>
-                            <div className=' flex items-center justify-center gap-5 mt-8'>
+                            <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-2/5 m-auto ">DELIVERED <LocalShippingIcon /></button>
+                            <div className=' flex items-center justify-center gap-5 my-8'>
                                 <input ref={quantityRef} className=' w-1/2 my-0' placeholder='Quantity (+n to add, -n to delivery)'></input>
-                                <button onClick={() => handleUpdateStockBtn(_id)} className='buy--btn w-1/4 my-0'>UPDATE STOCK</button>
+                                <button onClick={() => handleUpdateStockBtn(_id)} className='buy--btn w-1/2 my-0'>UPDATE STOCK <UpdateIcon /></button>
+                            </div>
+                            <div className=' text-right pb-5'>
+                                <Link className=' text-rose-700 text-lg font-medium bg-rose-100 p-2 rounded-full' to={'/inventory'}>Manage Inventories <ArrowForwardIcon /> </Link>
                             </div>
                         </>
                 }

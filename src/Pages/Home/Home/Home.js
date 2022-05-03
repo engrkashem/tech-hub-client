@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useGetStock from '../../../hooks/useGetProducts';
 import Banner from '../Banner/Banner';
 import ProductCard from '../ProductCard/ProductCard';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Home = () => {
     const url = `https://protected-ridge-43119.herokuapp.com/products`;
@@ -19,6 +21,9 @@ const Home = () => {
                             product={product}
                         ></ProductCard>)
                     }
+                </div>
+                <div className=' text-right pb-5'>
+                    <Link className=' text-rose-700 text-lg font-medium bg-rose-100 p-2 mr-12 rounded-full' to={'/inventory'}>Manage Inventories <ArrowForwardIcon /> </Link>
                 </div>
             </div>
         </div>

@@ -7,12 +7,13 @@ import { toast } from 'react-toastify';
 
 const ItemDetails = () => {
     const { id } = useParams();
+    // console.log(id)
     const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
     const [product, setProduct] = useGetStock(url);
 
     // console.log(product)
-    const handleDeliveredBtn = async () => {
-        const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
+    const handleDeliveredBtn = async (id) => {
+        // const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
         const newProduct = { ...product }
         const qty = newProduct.quantity;
         const newQty = parseInt(qty) - 1;
@@ -28,7 +29,7 @@ const ItemDetails = () => {
     }
 
     const handleUpdateStock = async (id, addedQty) => {
-        const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
+        // const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
         const newProduct = { ...product }
         const qty = newProduct.quantity;
         const newQty = parseInt(qty) + parseInt(addedQty);
