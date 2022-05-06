@@ -24,6 +24,30 @@ const Header = () => {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
+                                    {
+                                        user ?
+                                            <>
+                                                <CustomLink
+                                                    to="inventory"
+                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                >
+                                                    Manage Stock
+                                                </CustomLink>
+                                                <CustomLink
+                                                    to="my-items"
+                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                >
+                                                    My Items
+                                                </CustomLink>
+                                                <CustomLink
+                                                    to="add-stock"
+                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                >
+                                                    Add Item
+                                                </CustomLink>
+
+                                            </> : ''
+                                    }
                                     <CustomLink
                                         to="/"
                                         className="  px-3 py-2 rounded-md text-base font-medium"
