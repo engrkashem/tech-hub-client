@@ -8,7 +8,7 @@ const AddStock = () => {
     const [user] = useAuthState(auth);
     const email = user?.email;
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = product => {
+    const onSubmit = (product, event) => {
         // console.log(product)
         // const url = `https://protected-ridge-43119.herokuapp.com/products`;
         const url = `http://localhost:5000/products`;
@@ -23,7 +23,9 @@ const AddStock = () => {
             .then(data => {
                 // console.log(data);
                 toast('Product added to the Database.');
+                event.target.reset()
             })
+
     };
 
     return (
