@@ -6,10 +6,14 @@ import UpdateIcon from '@mui/icons-material/Update';
 
 
 
-const TableBodyComponent = ({ product }) => {
+const TableBodyComponent = ({ product, handleDelete }) => {
     const { name, img, quantity, _id } = product;
 
     const navigate = useNavigate();
+
+    const handleDeleteBtn = id => {
+        handleDelete(id);
+    }
 
     // console.log(name, img, quantity)
     return (
@@ -21,7 +25,7 @@ const TableBodyComponent = ({ product }) => {
             </TableCell>
             <TableCell align='center'>{quantity}</TableCell>
             <TableCell><button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto">Manage <UpdateIcon /></button></TableCell>
-            <TableCell><div title='Delete This Item' className=' flex items-center justify-center h-12 w-12 bg-rose-200 rounded-full'><DeleteForeverIcon className=' text-red-600' fontSize='large' /></div></TableCell>
+            <TableCell><div onClick={() => handleDeleteBtn(_id)} title='Delete This Item' className=' flex items-center justify-center h-12 w-12 bg-rose-200 rounded-full'><DeleteForeverIcon className=' text-red-600' fontSize='large' /></div></TableCell>
         </TableRow>
     );
 };

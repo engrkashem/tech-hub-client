@@ -2,7 +2,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import React from 'react';
 import TableBodyComponent from '../TableBodyComponent/TableBodyComponent';
 
-const TableComponent = ({ products }) => {
+const TableComponent = ({ products, handleDelete }) => {
 
 
     return (
@@ -21,6 +21,7 @@ const TableComponent = ({ products }) => {
                         products.map(product => <TableBodyComponent
                             key={product._id}
                             product={product}
+                            handleDelete={handleDelete}
                         ></TableBodyComponent>)
                     }
                 </TableBody>

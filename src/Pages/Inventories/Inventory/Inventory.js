@@ -7,7 +7,28 @@ import AddItemButton from '../AddItemButton/AddItemButton';
 const Inventory = () => {
     // const url = `https://protected-ridge-43119.herokuapp.com/inventory`;
     const url = `http://localhost:5000/inventory`;
-    const [products] = useGetStock(url);
+    const [products, setProducts] = useGetStock(url);
+
+    const handleDelete = id => {
+        // console.log(id)
+        const confirmation = window.confirm('Are You sure!! Want to delete this itemn???');
+        if (confirmation) {
+            // console.log(id)
+            const url = `http://localhost:5000/products/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+                .then(res => res.json())
+                .then(data => {
+                    // console.log(data)
+                    if (data.deletedCount > 0) {
+                        const restProducts = products.filter(p => p._id !== id);
+                        setProducts(restProducts);
+                    }
+                })
+        }
+
+    }
 
     return (
         <div className='inventory-container'>
@@ -18,6 +39,7 @@ const Inventory = () => {
             <TableComponent
                 key={'1'}
                 products={products}
+                handleDelete={handleDelete}
             ></TableComponent>
 
         </div>
