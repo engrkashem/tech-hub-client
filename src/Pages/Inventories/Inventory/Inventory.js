@@ -9,12 +9,13 @@ const Inventory = () => {
     const url = `http://localhost:5000/inventory`;
     const [products, setProducts] = useGetStock(url);
 
-    const handleDelete = id => {
+    const handleDelete = async id => {
         // console.log(id)
         const confirmation = window.confirm('Are You sure!! Want to delete this itemn???');
         if (confirmation) {
             // console.log(id)
             const url = `http://localhost:5000/products/${id}`;
+
             fetch(url, {
                 method: 'DELETE',
             })
