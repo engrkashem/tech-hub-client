@@ -1,0 +1,11 @@
+.not-found-container {
+    background-image: url(../../images/NotFound/notFound.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: inherit;
+}
+
+.not-found-text {
+    left: 58%;
+}
