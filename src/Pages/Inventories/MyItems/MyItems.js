@@ -9,13 +9,15 @@ import TableComponent from '../TableComponent/TableComponent';
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const email = user?.email;
-    const url = `http://localhost:5000/productByEmail?email=${email}`;
+    const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
+    // const url = `http://localhost:5000/productByEmail?email=${email}`;
     const [myProducts, setMyProducts] = useGetStock(url);
 
     const handleDelete = async id => {
         const confirmation = window.confirm('Do You Want to Delete ? Sure!!');
         if (confirmation) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://protected-ridge-43119.herokuapp.com/products/${id}`;
+            // const url = `http://localhost:5000/products/${id}`;
 
             fetch(url, {
                 method: 'DELETE',

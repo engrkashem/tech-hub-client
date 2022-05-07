@@ -5,8 +5,8 @@ import '../../../Styles/Inventory/Inventory.css'
 import AddItemButton from '../AddItemButton/AddItemButton';
 
 const Inventory = () => {
-    // const url = `https://protected-ridge-43119.herokuapp.com/inventory`;
-    const url = `http://localhost:5000/inventory`;
+    const url = `https://protected-ridge-43119.herokuapp.com/inventory`;
+    // const url = `http://localhost:5000/inventory`;
     const [products, setProducts] = useGetStock(url);
 
     const handleDelete = async id => {
@@ -14,7 +14,8 @@ const Inventory = () => {
         const confirmation = window.confirm('Are You sure!! Want to delete this itemn???');
         if (confirmation) {
             // console.log(id)
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://protected-ridge-43119.herokuapp.com/products/${id}`;
+            // const url = `http://localhost:5000/products/${id}`;
 
             fetch(url, {
                 method: 'DELETE',

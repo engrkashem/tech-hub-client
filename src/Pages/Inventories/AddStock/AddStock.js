@@ -10,8 +10,8 @@ const AddStock = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = (product, event) => {
         // console.log(product)
-        // const url = `https://protected-ridge-43119.herokuapp.com/products`;
-        const url = `http://localhost:5000/products`;
+        const url = `https://protected-ridge-43119.herokuapp.com/products`;
+        // const url = `http://localhost:5000/products`;
         fetch(url, {
             method: 'POST',
             headers: {

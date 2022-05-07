@@ -8,8 +8,8 @@ import { toast } from 'react-toastify';
 const ItemDetails = () => {
     const { id } = useParams();
     // console.log(id)
-    // const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://protected-ridge-43119.herokuapp.com/inventory/${id}`;
+    // const url = `http://localhost:5000/inventory/${id}`;
     const [product, setProduct] = useGetStock(url);
 
     // console.log(product)

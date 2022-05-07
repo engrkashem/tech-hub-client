@@ -6,8 +6,8 @@ import ProductCard from '../ProductCard/ProductCard';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Home = () => {
-    // const url = `https://protected-ridge-43119.herokuapp.com/products`;
-    const url = `http://localhost:5000/products`;
+    const url = `https://protected-ridge-43119.herokuapp.com/products`;
+    // const url = `http://localhost:5000/products`;
     const [products] = useGetStock(url);
     if (!products) {
         return <p>Loading.....</p>

@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import '../../Styles/NotFound/NotFound.css';
 
 const NotFound = () => {
+    //Vanilla CSS is scripted on NotFound.css file
+
     const navigate = useNavigate();
     return (
         <div className='not-found-container' >
-            <h2 className='not-found-text inline relative top-1/2 text-4xl text-red-500 font-bold'>Page not Found</h2>
-            <button onClick={() => navigate('/home')} className='not-found-text text-black relative top-1/2 w-44' >BACK TO HOME</button>
+            <h2 className='not-found-text relative text-6xl text-rose-600 font-bold'>Route not Found</h2>
+            <button onClick={() => navigate('/home')} className='not-found-text block mx-auto text-white bg-rose-600 relative w-44' >BACK TO HOME</button>
         </div>
     );
 };
