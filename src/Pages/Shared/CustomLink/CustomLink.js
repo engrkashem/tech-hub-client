@@ -5,11 +5,12 @@ const CustomLink = ({ children, to, ...props }) => {
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname, end: true });
     return (
-        <div>
+        <div className='h-10'>
             <Link
                 style={{
-                    backgroundColor: match ? "rgb(244 63 94) " : "rgb(240 253 250)",
-                    color: match ? "white " : "rgb(225 29 72)"
+                    backgroundColor: match ? "rgb(225 29 72) " : "",
+                    color: match ? "white " : "white",
+                    border: match ? "" : "1px solid lightgray"
                 }
                 }
                 to={to}

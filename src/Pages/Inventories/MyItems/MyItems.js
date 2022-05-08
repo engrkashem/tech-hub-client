@@ -37,7 +37,7 @@ const MyItems = () => {
 
     return (
         <div>
-            <h2>My Item: {myProducts.length}</h2>
+            <h2 className=' text-center text-5xl title-shadows py-10 mb-5 text-rose-600'>MY ITEMS ({myProducts.length})</h2>
             <TableComponent
                 key={'2'}
                 products={myProducts}

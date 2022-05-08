@@ -5,20 +5,22 @@ import CustomLink from '../Shared/CustomLink/CustomLink';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import '../../Styles/Header/Header.css';
+import logo from '../../images/logoes/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [user] = useAuthState(auth);
     return (
         <div>
-            <nav className=" bg-teal-50 z-10">
+            <nav className=" header-container z-10">
                 <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="w-full flex items-center justify-between">
                             <div >
                                 <img
-                                    className="h-8 w-8"
-                                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                                    className="h-16"
+                                    src={logo}
                                     alt="Workflow"
                                 />
                             </div>
@@ -29,19 +31,19 @@ const Header = () => {
                                             <>
                                                 <CustomLink
                                                     to="inventory"
-                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                    className="  px-3 py-2 rounded-full text-base font-medium"
                                                 >
                                                     Manage Stock
                                                 </CustomLink>
                                                 <CustomLink
                                                     to="my-items"
-                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                    className="  px-3 py-2 rounded-full text-base font-medium"
                                                 >
                                                     My Items
                                                 </CustomLink>
                                                 <CustomLink
                                                     to="add-stock"
-                                                    className="  px-3 py-2 rounded-md text-base font-medium"
+                                                    className="  px-3 py-2 rounded-full text-base font-medium"
                                                 >
                                                     Add Item
                                                 </CustomLink>
@@ -50,21 +52,21 @@ const Header = () => {
                                     }
                                     <CustomLink
                                         to="/"
-                                        className="  px-3 py-2 rounded-md text-base font-medium"
+                                        className="  px-3 py-2 rounded-full text-base font-medium"
                                     >
                                         Home
                                     </CustomLink>
 
                                     <CustomLink
                                         to="/blog"
-                                        className="  px-3 py-2 rounded-md text-base font-medium"
+                                        className="  px-3 py-2 rounded-full text-base font-medium"
                                     >
                                         Blogs
                                     </CustomLink>
 
                                     <CustomLink
                                         to="/about"
-                                        className=" px-3 py-2 rounded-md text-base font-medium"
+                                        className="  px-3 py-2 rounded-full text-base font-medium"
                                     >
                                         About
                                     </CustomLink>
@@ -72,13 +74,13 @@ const Header = () => {
                                         user ? <CustomLink
                                             onClick={() => signOut(auth)}
                                             to="/login"
-                                            className=" px-3 py-2 rounded-md text-base font-medium"
+                                            className="  px-3 py-2 rounded-full text-base font-medium"
                                         >
                                             Log Out
                                         </CustomLink> :
                                             <CustomLink
                                                 to="/login"
-                                                className=" px-3 py-2 rounded-md text-base font-medium"
+                                                className="  px-3 py-2 rounded-full text-base font-medium"
                                             >
                                                 Login
                                             </CustomLink>
@@ -144,21 +146,21 @@ const Header = () => {
                         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                             <CustomLink
                                 to="/"
-                                className="  px-3 py-2 rounded-md text-base font-medium"
+                                className="  px-3 py-2 rounded-full text-base font-medium"
                             >
                                 Home
                             </CustomLink>
 
                             <CustomLink
                                 to="/blog"
-                                className="  px-3 py-2 rounded-md text-base font-medium"
+                                className="  px-3 py-2 rounded-full text-base font-medium"
                             >
                                 Blogs
                             </CustomLink>
 
                             <CustomLink
                                 to="/about"
-                                className=" px-3 py-2 rounded-md text-base font-medium"
+                                className="  px-3 py-2 rounded-full text-base font-medium"
                             >
                                 About
                             </CustomLink>
@@ -166,13 +168,13 @@ const Header = () => {
                                 user ?
                                     <CustomLink onClick={() => signOut(auth)}
                                         to="/login"
-                                        className=" px-3 py-2 rounded-md text-base font-medium"
+                                        className="  px-3 py-2 rounded-full text-base font-medium"
                                     >
                                         Log Out
                                     </CustomLink> :
                                     <CustomLink
                                         to="/login"
-                                        className=" px-3 py-2 rounded-md text-base font-medium"
+                                        className="  px-3 py-2 rounded-full text-base font-medium"
                                     >
                                         Login
                                     </CustomLink>
