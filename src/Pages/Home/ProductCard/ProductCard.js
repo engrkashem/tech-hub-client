@@ -60,10 +60,10 @@ const ProductCard = ({ product, handleDeliveredBtn, handleUpdateStock }) => {
                     (pageRoute === '/') ?
                         <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto">REVIEW STOCK <InventoryIcon /></button> :
                         <>
-                            <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-2/5 m-auto ">DELIVERED <LocalShippingIcon /></button>
+                            <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-2/5 m-auto bg-rose-600">DELIVERED <LocalShippingIcon /></button>
                             <div className=' flex items-center justify-center gap-5 my-8'>
                                 <input ref={quantityRef} className=' w-1/2 my-0' placeholder='Quantity (+n to add, -n to delivery)'></input>
-                                <button onClick={() => handleUpdateStockBtn(_id)} className='buy--btn w-1/2 my-0'>UPDATE STOCK <UpdateIcon /></button>
+                                <button onClick={() => handleUpdateStockBtn(_id)} className='buy--btn w-1/2 my-0 bg-rose-600'>UPDATE STOCK <UpdateIcon /></button>
                             </div>
                             <div className=' text-right pb-5'>
                                 <Link className=' text-rose-700 text-lg font-medium bg-rose-100 p-2 rounded-full' to={'/inventory'}>Manage Inventories <ArrowForwardIcon /> </Link>

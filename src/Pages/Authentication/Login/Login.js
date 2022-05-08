@@ -6,6 +6,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
+import Loader from '../../Shared/Loader/Loader';
 
 const Login = () => {
     //vanilla CSS scripted on Login.css file
@@ -43,7 +44,7 @@ const Login = () => {
     }
 
     if (loading || sending) {
-        return <p>Loading.....</p>
+        return <Loader></Loader>
     }
 
     const handleLoginSubmit = async e => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import useGetStock from '../../../hooks/useGetProducts';
+import Loader from '../../Shared/Loader/Loader';
 import TableComponent from '../TableComponent/TableComponent';
 
 
@@ -12,6 +13,9 @@ const MyItems = () => {
     const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
     // const url = `http://localhost:5000/productByEmail?email=${email}`;
     const [myProducts, setMyProducts] = useGetStock(url);
+    if (!myProducts.length) {
+        return <Loader></Loader>
+    }
 
     const handleDelete = async id => {
         const confirmation = window.confirm('Do You Want to Delete ? Sure!!');

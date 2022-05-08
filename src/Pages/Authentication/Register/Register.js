@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loader from '../../Shared/Loader/Loader';
 
 const Register = () => {
     //vanilla CSS scripted on Login.css file
@@ -30,7 +31,7 @@ const Register = () => {
     }
 
     if (loading || updating) {
-        return <p>Loading....</p>
+        return <Loader></Loader>
     }
 
     let errorMessage;

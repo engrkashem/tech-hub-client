@@ -3,11 +3,15 @@ import useGetStock from '../../../hooks/useGetProducts';
 import TableComponent from '../TableComponent/TableComponent';
 import '../../../Styles/Inventory/Inventory.css'
 import AddItemButton from '../AddItemButton/AddItemButton';
+import Loader from '../../Shared/Loader/Loader';
 
 const Inventory = () => {
     const url = `https://protected-ridge-43119.herokuapp.com/inventory`;
     // const url = `http://localhost:5000/inventory`;
     const [products, setProducts] = useGetStock(url);
+    if (!products.length) {
+        return <Loader></Loader>
+    }
 
     const handleDelete = async id => {
         // console.log(id)
