@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import ProductCard from '../ProductCard/ProductCard';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Loader from '../../Shared/Loader/Loader';
+import Warehouse from '../Warehouse/Warehouse';
 
 const Home = () => {
     const url = `https://protected-ridge-43119.herokuapp.com/products`;
@@ -31,7 +32,7 @@ const Home = () => {
                     <Link className=' text-rose-700 text-lg font-medium bg-rose-100 p-2 mr-12 rounded-full' to={'/inventory'}>Manage Inventories <ArrowForwardIcon /> </Link>
                 </div>
             </div>
-
+            <Warehouse></Warehouse>
         </div>
     );
 };
