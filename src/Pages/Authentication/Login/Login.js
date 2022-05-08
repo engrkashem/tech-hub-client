@@ -53,7 +53,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         await signInWithEmailAndPassword(email, password);
-        const url = `http://localhost:5000/login`;
+        const url = `https://protected-ridge-43119.herokuapp.com/login`;
         const { data } = await axios.post(url, { email });
         localStorage.setItem('JWT_Token', data?.token);
         navigate(from, { replace: true });
