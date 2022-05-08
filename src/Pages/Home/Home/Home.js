@@ -6,6 +6,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Loader from '../../Shared/Loader/Loader';
 import Warehouse from '../Warehouse/Warehouse';
+import SearchSec from '../SearchSec/SearchSec';
 
 const Home = () => {
     const url = `https://protected-ridge-43119.herokuapp.com/products`;
@@ -33,6 +34,7 @@ const Home = () => {
                 </div>
             </div>
             <Warehouse></Warehouse>
+            <SearchSec></SearchSec>
         </div>
     );
 };
