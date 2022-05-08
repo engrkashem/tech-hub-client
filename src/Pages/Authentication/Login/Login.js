@@ -7,6 +7,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import Loader from '../../Shared/Loader/Loader';
+import axios from 'axios';
 
 const Login = () => {
     //vanilla CSS scripted on Login.css file
@@ -33,8 +34,8 @@ const Login = () => {
         );
 
     if (user) {
-        console.log(user);
-        navigate(from, { replace: true });
+        // console.log(user);
+
     }
 
     let errorMessage;
@@ -52,6 +53,12 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         await signInWithEmailAndPassword(email, password);
+        const url = `http://localhost:5000/login`;
+        const { data } = await axios.post(url, { email });
+        localStorage.setItem('JWT_Token', data?.token);
+        navigate(from, { replace: true });
+        console.log(data)
+
     }
 
     const resetPassword = async () => {

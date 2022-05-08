@@ -1,18 +1,43 @@
-import React from 'react';
+import axios from 'axios';
+import { signOut } from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import useGetStock from '../../../hooks/useGetProducts';
+// import useGetStock from '../../../hooks/useGetProducts';
 import Loader from '../../Shared/Loader/Loader';
 import TableComponent from '../TableComponent/TableComponent';
 
 
 
 const MyItems = () => {
+    const [myProducts, setMyProducts] = useState([]);
     const [user] = useAuthState(auth);
-    const email = user?.email;
-    const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
-    // const url = `http://localhost:5000/productByEmail?email=${email}`;
-    const [myProducts, setMyProducts] = useGetStock(url);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const email = user?.email;
+        const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
+        // const url = `http://localhost:5000/productByEmail?email=${email}`;
+        const getData = async () => {
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('JWT_Token')}`
+                    }
+                });
+                setMyProducts(data);
+            }
+            catch (error) {
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login');
+                }
+            }
+        }
+        getData();
+    }, [user])
+
     if (!myProducts.length) {
         return <Loader></Loader>
     }
