@@ -58,7 +58,7 @@ const ProductCard = ({ product, handleDeliveredBtn, handleUpdateStock }) => {
                 </div>
                 {
                     (pageRoute === '/') ?
-                        <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto">REVIEW STOCK <InventoryIcon /></button> :
+                        <button onClick={() => navigate(`/inventory/${_id}`)} className="buy--btn w-full m-auto bg-rose-600">REVIEW STOCK <InventoryIcon /></button> :
                         <>
                             <button onClick={() => handleDeliveredBtn(_id)} className="buy--btn w-2/5 m-auto bg-rose-600">DELIVERED <LocalShippingIcon /></button>
                             <div className=' flex items-center justify-center gap-5 my-8'>
