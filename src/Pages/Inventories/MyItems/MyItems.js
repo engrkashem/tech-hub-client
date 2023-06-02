@@ -17,7 +17,8 @@ const MyItems = () => {
 
     useEffect(() => {
         const email = user?.email;
-        const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
+        const url = `https://tech-hub-warehouse.onrender.com/productByEmail?email=${email}`;
+        // const url = `https://protected-ridge-43119.herokuapp.com/productByEmail?email=${email}`;
         // const url = `http://localhost:5000/productByEmail?email=${email}`;
         const getData = async () => {
             try {
@@ -45,7 +46,8 @@ const MyItems = () => {
     const handleDelete = async id => {
         const confirmation = window.confirm('Do You Want to Delete ? Sure!!');
         if (confirmation) {
-            const url = `https://protected-ridge-43119.herokuapp.com/products/${id}`;
+            const url = `https://tech-hub-warehouse.onrender.com/products/${id}`;
+            // const url = `https://protected-ridge-43119.herokuapp.com/products/${id}`;
             // const url = `http://localhost:5000/products/${id}`;
 
             fetch(url, {

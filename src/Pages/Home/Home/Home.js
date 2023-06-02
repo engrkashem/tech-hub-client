@@ -9,7 +9,8 @@ import Warehouse from '../Warehouse/Warehouse';
 import SearchSec from '../SearchSec/SearchSec';
 
 const Home = () => {
-    const url = `https://protected-ridge-43119.herokuapp.com/products`;
+    const url = `https://tech-hub-warehouse.onrender.com/products`;
+    // const url = `https://protected-ridge-43119.herokuapp.com/products`;
     // const url = `http://localhost:5000/products`;
     const [products] = useGetStock(url);
     if (!products.length) {
